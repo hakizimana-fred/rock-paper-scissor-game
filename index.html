@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaper Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" role="container">
+        <div class="results__holder">
+            <img src="images/logo.svg" alt="">
+            <button class="btn"><span>Your Score</span><span>12</span></button>
+        </div>
+        
+        <div class="selections show">
+            <div class="text__content">
+                <h1> You picked</h1>
+                <h1> The house picked</h1>
+            </div>
+
+            <div class="choices">
+               <button><img src="images/icon-paper.svg" class="player__choice" alt=""> </button>
+               <div>
+                    <h3 class="player__message"></h3>
+                    <button style="border-radius: 0" class="btn btn-win">play again</button>
+               </div>
+               <button><img src="images/icon-rock.svg" class="computer__choice" alt=""></button>
+           </div>
+        </div>
+
+        <div class="choice__wrapper">
+
+            <div>
+                <button id="paper" class="player-btn"><img src="images/icon-paper.svg" alt=""></button>
+            </div>
+            <div>
+                <button id="scissors" class="player-btn"><img src="images/icon-scissors.svg" alt=""></button>
+            </div>
+            <div>
+                <button id="rock" class="player-btn"><img src="images/icon-rock.svg" alt=""></button>
+            </div>
+        </div>
+
+   </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

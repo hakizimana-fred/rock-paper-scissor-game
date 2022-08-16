@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap');
+
+:root {
+    --scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+    --paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+    --rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+    --lizard-gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+    --background-gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100vh;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 20px auto;;
+    width: 50%;
+
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    outline:none;
+    font-size: 16px;;
+    padding: 10px 20px;
+}
+
+.results__holder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.results__holder img {
+    width: 100px;
+    height: 80px;
+}
+
+.results__holder button {
+    padding: 8px;
+    margin-right: 10px;
+}
+.results__holder button span:last-of-type {
+    display: block;
+    font-size: 40px;
+    font-weight: 400;
+    color: #333;
+}
+
+.selections {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.selections > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selections .choices {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.selections button:first-child, .selections button:last-of-type {
+    padding: 20px 20px; 
+    border-radius: 50%;
+    
+}
+
+.selections .choices img {
+    width: 100px;
+    height: 100px;
+}
+
+.selections .btn-win {
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    margin-top: 20px;
+}
+.selections h3 {
+    font-size: 40px;
+}
+
+
+.choice__wrapper{
+    max-width: 500px;
+    height: 55vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    display: none;
+    display: flex;
+    background: url("../images/bg-triangle.svg") no-repeat;
+    background-position: center;
+}
+
+.choice__wrapper > div {
+    width: 250px;
+    height: 100px;
+}
+.choice__wrapper > div > button {
+    border-radius: 50%;
+    padding: 40px 50px; 
+    border: 20px solid green;
+}
+
+/* .choice__wrapper > div > button:hover{
+    transform: translateY(-15px);
+} */
+ 
+
+.show {
+    display: none;
+}
