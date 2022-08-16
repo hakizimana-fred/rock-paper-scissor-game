@@ -12,7 +12,7 @@
     <div class="container" role="container">
         <div class="results__holder">
             <img src="images/logo.svg" alt="">
-            <button class="btn"><span>Your Score</span><span>12</span></button>
+            <button class="btn"><span>Score</span><span class="score__text"></span></button>
         </div>
         
         <div class="selections show">
@@ -43,8 +43,17 @@
                 <button id="rock" class="player-btn"><img src="images/icon-rock.svg" alt=""></button>
             </div>
         </div>
-
    </div>
+   <div class="rules">
+        <button class="btn btn-rules">Rules</button>
+    </div>
+
+    <div class="modal show">
+        <div class="modal-body">
+            <img src="images/image-rules.svg" alt="">
+                <i class="fa fa-close" style="color: black" onclick="closeModal()"></i>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

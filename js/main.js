@@ -1,8 +1,10 @@
 const playerButtons = document.querySelectorAll('.player-btn')
-const scissor = document.querySelector('#scissor')
+document.querySelector('.btn-rules').addEventListener('click', displayRules)
+
 
 let randomChoice
 let humanChoice
+let score = 0
 const choicesArr = ['rock', 'paper', 'scissors'] 
 
 // Generate guesses on random
@@ -11,6 +13,11 @@ function randomGuesses() {
    randomChoice = computerChoice
    return randomChoice
 }
+
+function displayRules() {
+    document.querySelector('.modal').classList.toggle('show')
+}
+
 // Loop through player choices then call Play function
 for (let playerBtn of playerButtons) {
     playerBtn.addEventListener('click', play)
@@ -31,19 +38,24 @@ function determineWinner(human, computer) {
             renderResult(human, computer, 'lose')
         }else{
             renderResult(human, computer, 'win')
+            score +=1
+            document.querySelector('.score__text').textContent = score
         }
     }else if (human === "scissors") {
         if (computer === "rock") {
             renderResult(human, computer, 'lose')
         }else {
+            score +=1
             renderResult(human, computer, 'win')
+            document.querySelector('.score__text').textContent = score
         }
     }else if (human === "paper") {
             if (computer === "scissors") {
                 renderResult(human, computer, 'lose')
             }else{
-                console.log('player won')
                 renderResult(human, computer, 'win')
+                score +=1
+                document.querySelector('.score__text').textContent = score
             }
     }
 }
@@ -67,4 +79,6 @@ function playAgain(){
 
 playAgain()
 
-
+function closeModal(){
+    document.querySelector('.modal').classList.add('show')
+}
