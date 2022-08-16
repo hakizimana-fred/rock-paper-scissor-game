@@ -2,16 +2,13 @@ const playerButtons = document.querySelectorAll('.player-btn')
 document.querySelector('.btn-rules').addEventListener('click', displayRules)
 
 
-let randomChoice
 let humanChoice
 let score = 0
 const choicesArr = ['rock', 'paper', 'scissors'] 
 
 // Generate guesses on random
 function randomGuesses() {
-   let computerChoice =  choicesArr[Math.floor(Math.random() * choicesArr.length)] 
-   randomChoice = computerChoice
-   return randomChoice
+   return choicesArr[Math.floor(Math.random() * choicesArr.length)] 
 }
 
 function displayRules() {
@@ -25,7 +22,7 @@ for (let playerBtn of playerButtons) {
 // Play function initialized
 function play() {
     humanChoice = this.id
-    randomChoice = randomGuesses()  
+    let randomChoice = randomGuesses()  
     determineWinner(humanChoice, randomChoice)
 }
 
